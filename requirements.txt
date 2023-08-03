@@ -1,0 +1,7 @@
+fastapi
+slack_sdk
+pydantic
+requests
+python-dotenv
+nltk
+uvicorn
