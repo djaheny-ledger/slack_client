@@ -51,7 +51,7 @@ class SlackEvent(BaseModel):
 
 def react_description(query, user_id): 
     headers = {"Authorization": f"Bearer {os.getenv('BACKEND_API_KEY')}"}
-    response = requests.post('https://knowlbot.aws.stg.ldg-tech.com/', headers=headers, json={"user_input": query, "user_id": user_id}) # New
+    response = requests.post('https://knowlbot.aws.stg.ldg-tech.com/gpt', headers=headers, json={"user_input": query, "user_id": user_id}) # New
     formatted_output = response.json()['output']
     # Replace markdown link formatting with Slack link formatting
     link_pattern = r'\[(.*?)\]\((.*?)\)'
